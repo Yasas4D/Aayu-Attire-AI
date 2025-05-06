@@ -20,6 +20,10 @@ Bolt is a lightweight, drag-and-drop visual builder for deploying static website
 
 Lovable is an AI-powered no-code builder designed to create responsive websites quickly. The examples provided show how to export, customize, and publish sites created with Lovable’s visual interface.
 
+### 5. [Replit](https://replit.com)
+
+Replit is a powerful in-browser IDE that supports full-stack development and instant deployment. This folder includes sample web apps and backend scripts that demonstrate building and hosting projects directly from Replit.
+
 ## 🚀 How to Use
 
 Each directory includes a `README.md` for its respective platform with:

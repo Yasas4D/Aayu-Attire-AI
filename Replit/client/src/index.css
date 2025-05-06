@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 223 10% 22%;
+  --muted: 210 4.8% 95.9%;
+  --muted-foreground: 215 5.3% 46.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 223 10% 22%;
+  --card: 0 0% 100%;
+  --card-foreground: 223 10% 22%;
+  --border: 220 5.9% 90%;
+  --input: 220 5.9% 90%;
+  --primary: 223 10% 22%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 1% 75%;
+  --secondary-foreground: 223 10% 22%;
+  --accent: 18 83% 63%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 223 10% 22%;
+  --radius: 0.5rem;
+  --chart-1: 223 10% 22%;
+  --chart-2: 213 1% 75%;
+  --chart-3: 18 83% 63%;
+  --chart-4: 0 84.2% 60.2%;
+  --chart-5: 222 18.5% 40%;
+  --sidebar-background: 223 10% 22%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 18 83% 63%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 213 1% 75%;
+  --sidebar-accent-foreground: 223 10% 22%;
+  --sidebar-border: 215 10% 32%;
+  --sidebar-ring: 213 1% 75%;
+}
+
+.dark {
+  --background: 223 10% 12%;
+  --foreground: 0 0% 98%;
+  --muted: 223 10% 20%;
+  --muted-foreground: 215 5% 70%;
+  --popover: 223 10% 12%;
+  --popover-foreground: 0 0% 98%;
+  --card: 223 10% 12%;
+  --card-foreground: 0 0% 98%;
+  --border: 223 10% 20%;
+  --input: 223 10% 20%;
+  --primary: 223 10% 22%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 223 10% 30%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 18 83% 63%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 213 1% 75%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-light text-primary font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .bg-light {
+    background-color: #F7F9FB;
+  }
+
+  .text-light {
+    color: #F7F9FB;
+  }
+
+  .bg-dark {
+    background-color: #4F5D75;
+  }
+
+  .text-dark {
+    color: #4F5D75;
+  }
+
+  .bg-primary {
+    background-color: #2D3142;
+  }
+
+  .text-primary {
+    color: #2D3142;
+  }
+
+  .bg-secondary {
+    background-color: #BFC0C0;
+  }
+
+  .text-secondary {
+    color: #BFC0C0;
+  }
+
+  .bg-accent {
+    background-color: #EF8354;
+  }
+  
+  .text-accent {
+    color: #EF8354;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-accent {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Product card styles */
+.product-card:hover .quick-view {
+  opacity: 1;
+}
+
+/* Carousel styles */
+.carousel {
+  scroll-snap-type: x mandatory;
+}
+
+.carousel .slide {
+  scroll-snap-align: start;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.filter-item input:checked + label::before {
+  background-color: #EF8354;
+  border-color: #EF8354;
+}
